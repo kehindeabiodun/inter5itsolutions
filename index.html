@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter5 IT Solutions - Enterprise IT Solutions & Cloud Integration</title>
+    
+    <!-- Metropolis Font CDN via Fontsource -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.0/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.0/500.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.0/600.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5.0.0/700.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#023047',
+                            dark: '#012132',
+                            light: '#044463'
+                        },
+                        orange: {
+                            DEFAULT: '#FB8500',
+                            hover: '#D96F00',
+                            light: '#FFF0E0'
+                        },
+                        skyblue: {
+                            DEFAULT: '#8ECAE6',
+                            light: '#EBF7FC'
+                        },
+                        body: '#1F2933',
+                        muted: '#52606D',
+                        lightbg: '#F7FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Metropolis', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Metropolis', 'Inter', sans-serif;
+            color: #1F2933;
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="bg-white text-body antialiased flex flex-col min-h-screen">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-navy border-b border-navy-light/40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand / WebP Logo -->
+            <a href="#home" class="flex items-center space-x-2 text-white font-bold text-xl tracking-tight focus:outline-none rounded-lg p-1">
+                <img src="https://inter5it.com/logos/inter5it-logo-dark.png" alt="inter5 IT Logo" class="h-10 md:h-12 w-auto object-contain hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/180x50/023047/ffffff?text=inter5+IT';">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8" aria-label="Desktop Navigation">
+                <a href="#home" class="text-slate-200 hover:text-orange text-sm font-medium transition-colors">Home</a>
+                <a href="#about" class="text-slate-200 hover:text-orange text-sm font-medium transition-colors">About Us</a>
+                <a href="#services" class="text-slate-200 hover:text-orange text-sm font-medium transition-colors">Services</a>
+                <a href="#why-us" class="text-slate-200 hover:text-orange text-sm font-medium transition-colors">Why Choose Us</a>
+                <a href="#contact" class="bg-orange hover:bg-orange-hover text-white text-sm font-semibold px-5 py-2.5 rounded-md transition-all shadow-md hover:shadow-lg">Contact Us</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-slate-200 hover:text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange" aria-label="Toggle Navigation Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-dark border-b border-navy-light px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:text-white hover:bg-navy-light">Home</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:text-white hover:bg-navy-light">About Us</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:text-white hover:bg-navy-light">Services</a>
+            <a href="#why-us" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:text-white hover:bg-navy-light">Why Choose Us</a>
+            <a href="#contact" class="mobile-link block px-3 py-2.5 mt-2 text-center rounded-md text-base font-semibold bg-orange text-white hover:bg-orange-hover">Contact Us</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section id="home" class="relative bg-gradient-to-br from-navy via-navy-dark to-navy-light text-white py-20 lg:py-28 overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8ECAE6_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 text-center lg:text-left">
+                        <span class="inline-block bg-navy-light/80 border border-skyblue/30 text-skyblue text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">
+                            Enterprise IT Solutions
+                        </span>
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+                            Empowering Enterprise Growth Through <span class="text-orange">Modern Technology</span>
+                        </h1>
+                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Inter5 IT Solutions delivers scalable infrastructure, cloud transformation, robust cybersecurity, and enterprise resource planning tailored to modern organizations.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#contact" class="w-full sm:w-auto bg-orange hover:bg-orange-hover text-white font-semibold px-7 py-3.5 rounded-md transition-all text-center shadow-lg hover:shadow-orange/20">
+                                Schedule Consultation
+                            </a>
+                            <a href="#services" class="w-full sm:w-auto border border-slate-400 hover:border-white text-slate-200 hover:text-white font-medium px-7 py-3.5 rounded-md transition-colors text-center">
+                                Explore Services
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative flex justify-center lg:justify-end">
+                        <div class="w-full max-w-lg bg-navy-light/40 backdrop-blur-md p-8 rounded-2xl border border-white/10 shadow-2xl relative">
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="p-3 bg-orange/20 text-orange rounded-xl shrink-0">
+                                        <i data-lucide="cloud-cog" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-white text-lg">Cloud Infrastructure</h3>
+                                        <p class="text-slate-300 text-sm">Microsoft Azure & Office 365 cloud integration.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="p-3 bg-skyblue/20 text-skyblue rounded-xl shrink-0">
+                                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-white text-lg">Proactive Cybersecurity</h3>
+                                        <p class="text-slate-300 text-sm">Threat detection, disaster recovery, and compliance management.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="p-3 bg-orange/20 text-orange rounded-xl shrink-0">
+                                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-white text-lg">ERP Implementation</h3>
+                                        <p class="text-slate-300 text-sm">End-to-end enterprise resource planning deployments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-orange font-bold text-sm uppercase tracking-wider">About Inter5 IT</span>
+                        <h2 class="text-3xl font-bold text-navy mt-2 mb-6">Your Strategic Technology Partner</h2>
+                        <p class="text-muted leading-relaxed mb-4">
+                            Inter5 IT Solutions is a full-service technology consulting firm specializing in enterprise system integration, managed services, and cloud transformations. We help organizations streamline operations, protect critical digital assets, and drive sustainable growth.
+                        </p>
+                        <p class="text-muted leading-relaxed mb-6">
+                            By combining technical expertise with a deep understanding of business processes, we design solutions that deliver measurable ROI, reduced risk, and improved organizational agility.
+                        </p>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4 border-t border-slate-100 pt-6">
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-orange"></i>
+                                <span class="font-medium text-navy">Certified Engineers</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-orange"></i>
+                                <span class="font-medium text-navy">24/7 Support Coverage</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-orange"></i>
+                                <span class="font-medium text-navy">Custom SLA Guarantees</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-orange"></i>
+                                <span class="font-medium text-navy">End-to-End Delivery</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-lightbg p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
+                            <div class="text-4xl font-extrabold text-navy mb-2">99.9%</div>
+                            <div class="text-sm font-medium text-muted">System Availability</div>
+                        </div>
+                        <div class="bg-lightbg p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
+                            <div class="text-4xl font-extrabold text-orange mb-2">10+</div>
+                            <div class="text-sm font-medium text-muted">Years Expertise</div>
+                        </div>
+                        <div class="bg-lightbg p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
+                            <div class="text-4xl font-extrabold text-orange mb-2">500+</div>
+                            <div class="text-sm font-medium text-muted">Deployments</div>
+                        </div>
+                        <div class="bg-lightbg p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
+                            <div class="text-4xl font-extrabold text-navy mb-2">100%</div>
+                            <div class="text-sm font-medium text-muted">Client Dedication</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="py-20 bg-lightbg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-orange font-bold text-sm uppercase tracking-wider">Services & Capabilities</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-navy mt-2">Comprehensive IT Solutions</h2>
+                    <p class="text-muted mt-4 text-base">
+                        Tailored technology services built to satisfy modern corporate security, scalability, and operational standards.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-orange/10 text-orange rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">System Integration</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            Harmonize legacy applications and new digital infrastructure. Connect disparate systems into unified operational workflows.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-navy/10 text-navy rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="server" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Managed IT Services</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            24/7 network monitoring, proactive maintenance, desktop management, and dedicated helpdesk technical support.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-orange/10 text-orange rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="cloud" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Microsoft Cloud & Modern Work</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            Migrate and optimize Microsoft 365, Azure, Teams, and Sharepoint environments for safe remote collaboration.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-navy/10 text-navy rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Cybersecurity & Compliance</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            Endpoint protection, vulnerability assessments, firewall deployment, and data protection compliance frameworks.
+                        </p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-orange/10 text-orange rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="database-backup" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Backup & Disaster Recovery</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            Automated cloud backups, business continuity planning, and rapid recovery mechanisms during data loss events.
+                        </p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-navy/10 text-navy rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">ERP & Technology Procurement</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            Microsoft Dynamics 365 Business Central deployments paired with hardware and software licensing procurement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section id="why-us" class="py-20 bg-navy text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-orange font-bold text-sm uppercase tracking-wider">The Inter5 Advantage</span>
+                    <h2 class="text-3xl font-bold mt-2">Why Organizations Trust Us</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-navy-dark/60 p-8 rounded-2xl border border-navy-light text-center">
+                        <div class="w-14 h-14 bg-orange/20 text-orange rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="award" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Industry Expertise</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Engineers with enterprise experience across finance, health, energy, and retail technology sectors.
+                        </p>
+                    </div>
+
+                    <div class="bg-navy-dark/60 p-8 rounded-2xl border border-navy-light text-center">
+                        <div class="w-14 h-14 bg-skyblue/20 text-skyblue rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="headphones" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Dedicated Support</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Direct access to engineering teams with rapid SLA response times for zero downtime risk.
+                        </p>
+                    </div>
+
+                    <div class="bg-navy-dark/60 p-8 rounded-2xl border border-navy-light text-center">
+                        <div class="w-14 h-14 bg-orange/20 text-orange rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="trending-up" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Scalable Architecture</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Solutions engineered to accommodate organizational expansion without expensive re-architecting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <span class="text-orange font-bold text-sm uppercase tracking-wider">Get In Touch</span>
+                        <h2 class="text-3xl font-bold text-navy mt-2 mb-6">Start Your Technology Transformation</h2>
+                        <p class="text-muted leading-relaxed mb-8">
+                            Reach out to discuss your infrastructure, cloud, or cybersecurity projects with our senior consultants.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="p-3 bg-lightbg text-navy rounded-xl">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy">Corporate Head Office</h4>
+                                    <p class="text-muted text-sm mt-1">Oluwalogbon House <br> Plot A, Obafemi Awolowo Way, Ikeja, Lagos.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="p-3 bg-lightbg text-navy rounded-xl">
+                                    <i data-lucide="mail" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy">Email Inquiries</h4>
+                                    <p class="text-muted text-sm">support@inter5it.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="p-3 bg-lightbg text-navy rounded-xl">
+                                    <i data-lucide="phone" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy">Phone Support</h4>
+                                    <p class="text-muted text-sm mt-1">+234 (0) 903 347 5910</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form (Formspree Integration) -->
+                    <div class="lg:col-span-2 bg-lightbg p-8 rounded-2xl border border-slate-200">
+                        <h2 class="text-2xl font-bold text-navy mb-6">Send Us an Enquiry</h2>
+                        
+                        <form id="contact-form" action="https://formspree.io/f/xgavngao" method="POST" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="fullName" class="block text-sm font-medium text-navy mb-2">Full Name *</label>
+                                    <input type="text" name="name" id="fullName" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-orange bg-white text-body" placeholder="e.g. John Doe">
+                                </div>
+                                <div>
+                                    <label for="companyName" class="block text-sm font-medium text-navy mb-2">Company Name *</label>
+                                    <input type="text" name="company" id="companyName" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-orange bg-white text-body" placeholder="e.g. Enterprise Ltd">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-navy mb-2">Email Address *</label>
+                                    <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-orange bg-white text-body" placeholder="e.g. john@company.com">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-navy mb-2">Phone Number *</label>
+                                    <input type="tel" name="phone" id="phone" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-orange bg-white text-body" placeholder="e.g. 0809 xxxx xxx">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-navy mb-2">Service Required *</label>
+                                <select name="service" id="service" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-orange bg-white text-body">
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option value="System Integration">System Integration</option>
+                                    <option value="Managed IT Services">Managed IT Services</option>
+                                    <option value="Microsoft Cloud and Modern Work">Microsoft Cloud and Modern Work</option>
+                                    <option value="Cybersecurity">Cybersecurity</option>
+                                    <option value="Backup and Disaster Recovery">Backup and Disaster Recovery</option>
+                                    <option value="ERP">ERP</option>
+                                    <option value="Technology Procurement">Technology Procurement</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-navy mb-2">Message *</label>
+                                <textarea name="message" id="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-orange bg-white text-body" placeholder="Please describe your requirements..."></textarea>
+                            </div>
+
+                            <div>
+                                <button type="submit" id="submit-btn" class="bg-orange hover:bg-orange-hover text-white font-medium px-8 py-3.5 rounded-lg transition-colors w-full sm:w-auto text-base flex items-center justify-center">
+                                    <span id="btn-text">Send Enquiry</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div id="form-success" class="hidden mt-6 p-4 bg-green-50 border border-green-300 text-green-800 rounded-lg font-medium">
+                            Thank you for your inquiry. Our technical sales team will respond within 24 hours.
+                        </div>
+                        
+                        <div id="form-error" class="hidden mt-6 p-4 bg-red-50 border border-red-300 text-red-800 rounded-lg font-medium">
+                            An error occurred while submitting your inquiry. Please try again or email us directly at support@inter5it.com.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================================== -->
+<!-- UPDATED JAVASCRIPT SUBMISSION HANDLER      -->
+<!-- ========================================== -->
+<script>
+    async function handleFormSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const successBox = document.getElementById('form-success');
+        const errorBox = document.getElementById('form-error');
+
+        // Hide prior status messages
+        successBox.classList.add('hidden');
+        errorBox.classList.add('hidden');
+
+        // Show loading state
+        submitBtn.disabled = true;
+        btnText.textContent = 'Sending...';
+
+        try {
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                successBox.classList.remove('hidden');
+                form.reset();
+                setTimeout(() => {
+                    successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            } else {
+                errorBox.classList.remove('hidden');
+            }
+        } catch (error) {
+            errorBox.classList.remove('hidden');
+        } finally {
+            submitBtn.disabled = false;
+            btnText.textContent = 'Send Enquiry';
+        }
+    }
+</script>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-dark text-slate-400 py-12 border-t border-navy-light/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Footer Brand -->
+                <div class="md:col-span-2">
+                    <a href="#home" class="inline-block mb-4">
+                        <img src="https://inter5it.com/logos/inter5it-logo-dark.png" alt="inter5 IT Logo" class="h-10 md:h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/180x50/023047/ffffff?text=inter5+IT';">
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
+                        Delivering scalable cloud architectures, IT management, and cybersecurity solutions to empower enterprise clients.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-orange transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-orange transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-orange transition-colors">Services</a></li>
+                        <li><a href="#why-us" class="hover:text-orange transition-colors">Why Choose Us</a></li>
+                        <li><a href="#contact" class="hover:text-orange transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Summary -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Lagos, Nigeria</li>
+                        <li>contact@inter5it.com</li>
+                        <li>+234 (0) 903 347 5910</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-navy-light/60 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs">
+                <p>&copy; 2026 Inter5 IT Solutions. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Formspree Async Form Submission Handler
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const successBox = document.getElementById('form-success');
+            const errorBox = document.getElementById('form-error');
+
+            // Hide prior status messages
+            successBox.classList.add('hidden');
+            errorBox.classList.add('hidden');
+
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending...';
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    successBox.classList.remove('hidden');
+                    form.reset();
+                    setTimeout(() => {
+                        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
+                } else {
+                    errorBox.classList.remove('hidden');
+                }
+            } catch (error) {
+                errorBox.classList.remove('hidden');
+            } finally {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send Enquiry';
+            }
+        }
+    </script>
+</body>
+</html>
